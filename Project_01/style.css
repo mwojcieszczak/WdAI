@@ -1,0 +1,300 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+.aw-r {
+  font-family: "Audiowide", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.vt323{
+	font-family: "VT323", monospace;
+  	font-weight: 400;
+  	font-style: normal;
+}
+
+
+.frame{
+	width: 100vw;
+	height: 100vh;
+	background-color: gray;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	/* justify-content: center; */
+	z-index: 2;
+	position: fixed;
+}
+
+.screen{
+	margin-top: 1vw;
+	width: 98vw;
+	height: 85vh;
+	border-radius: 2rem;
+	border: solid 10px dimgray;
+	display: flex;
+	box-shadow: 7px 7px 7px black;
+}
+
+.control-panel{
+	margin-top: 2vh;
+	/* background-color: green; */
+	width: 99vw;
+	height: 10vh;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.background-video{
+	width: 100%;
+	/* background-color: black; */
+	/* height: 100vh; */
+	filter: blur(0.7rem);
+	z-index: 1;
+	border-radius: 2rem;
+	object-fit:cover;
+	border: solid 10px black;
+}
+
+
+.nav-button{
+	font-family: "Audiowide", sans-serif;
+  	font-weight: 400;
+  	font-style: normal;
+	/* font-family: "VT323", monospace;
+  	font-weight: 400;
+  	font-style: normal; */
+
+	font-size: 1.5rem;
+	padding: 0.5rem;
+	margin: 0.5rem;
+	background-color: greenyellow;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	box-shadow: 0 2px 2px 2px greenyellow, 0 5px 5px 5px black;
+	text-shadow: 1px 1px 1px black;
+	width: 12rem;
+}
+
+.nav-button-alien{
+	border-radius: 100%;
+	background-color: red;
+	box-shadow: 0 2px 2px 2px red, 0 5px 5px 5px black;
+	width: auto;
+}
+
+.nav-button-next{
+	background-color: gray;
+	box-shadow: 0 2px 2px 2px black;
+	font-size: 1.45rem;
+}
+
+.nav-button:active{
+	transition: all 20ms;
+	box-shadow: 0 2px 2px 2px black;
+	font-size: 1.45rem;
+}
+
+.nav{
+	display: flex;
+	justify-content: right;
+}
+
+.logo{
+	width: 20vw;
+	/* height: 100px; */
+}
+
+.logo > img{
+	width: 120px;
+	/* height: 100px; */
+	/* border-radius: 100%; */
+	/* border: 5px solid greenyellow; */
+}
+
+.content{
+	position: absolute;
+	/* background-color: red; */
+	z-index: 100;
+	width: 100%;
+	height: 85vh;
+	overflow-y: hidden;
+}
+
+.content-page{
+	/* font-family: "Audiowide", sans-serif;
+  	font-weight: 400;
+  	font-style: normal; */
+	font-family: "VT323", monospace;
+	font-weight: 400;
+  	font-style: normal;
+
+	color: greenyellow;
+	font-size: 2rem;
+
+	padding: 10rem;
+	height: 100%;
+}
+
+.author{
+	height: 50vh;
+	display: flex;
+	flex: 0 0 auto;
+	flex-direction: row;
+	justify-content: space-evenly;
+	align-items: center;
+	/* border-radius: 10px; */
+	border: dashed 2px greenyellow;
+	/* background-color: red; */
+	width: 100%;
+	/* margin-right: 10rem; */
+	overflow: hidden;
+	/* flex: 1; */
+}
+
+.author > img{
+	height: 80%;
+	border-radius: 10px;
+	margin: 2rem;
+}
+
+.author > p{
+	margin: 2rem;
+}
+
+.slider{
+	
+	display: flex;
+	flex-direction: row;
+	/* align-items: center; */
+	/* justify-content: space-evenly; */
+	overflow-x: hidden;
+	width: 100%;
+	/* background-color: red; */
+}
+
+form{
+	display: flex;
+	flex-direction: column;
+	flex:1;
+}
+
+input, textarea{
+	font-size: 2rem;
+
+	font-family: "VT323", monospace;
+	font-weight: 400;
+  	font-style: normal;
+
+	color: greenyellow;
+
+	margin-bottom: 1rem;
+
+	background: none;
+
+	border-radius: 0;
+
+	border: none;
+
+	border-bottom: 1px solid greenyellow;
+
+
+}
+
+input:focus, textarea:focus{
+	outline: none;
+}
+
+.contact{
+	display: flex;
+	flex-direction: row;
+}
+
+.contact>p{
+	flex: 1;
+}
+
+.gallery{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	height: 50vh;
+	flex: 0 0 auto;
+}
+
+.book > img{
+	width: 110px;
+}
+
+.book{
+	margin: 1rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+footer{
+	/* background-color: red; */
+	width: 100%;
+	color: greenyellow
+}
+
+a{
+	color: greenyellow
+}
+
+p:has(a){
+	margin: 1rem
+}
+
+.pilot{
+	width: 500px;
+}
+
+.pilot-div{
+	display: flex;
+	flex-direction: row;
+}
+
+.contact-sth{
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+	align-items: center;
+}
+
+.contact-sth>img{
+	width: 400px;
+	height: 400px;
+}
+
+.sources-sth{
+	display: flex;
+	flex-direction: row;
+	flex: 1;
+	align-items: center;
+}
+
+.sources-sth>img{
+	width: 500px;
+	height: 500px;
+}
+
+.action-button{
+	background: repeating-linear-gradient(
+		45deg,
+		greenyellow,
+		greenyellow 10px,
+		lightgray 10px,
+		lightgray 20px
+	);
+	border-color: lightgray;
+}
