@@ -1,0 +1,75 @@
+###userService
+###
+POST http://127.0.0.1:3001/api/register
+Content-Type: application/json
+
+{
+    "email":"aaaa",
+    "password":"bbb"
+}
+
+###
+POST http://127.0.0.1:3001/api/login
+Content-Type: application/json
+
+{
+    "email":"aaa",
+    "password":"bbb"
+}
+
+###
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFhYSIsImlhdCI6MTc2NTcxMzAzMCwiZXhwIjoxNzY1NzE2NjMwfQ.Cj0v9csIIzQz5mJlKPBZrxf-wW4ugu9mf4-y0aFmPjU
+###
+### bookService
+###
+GET http://127.0.0.1:3002/api/books
+Authorization: Bearer {{token}}
+
+###
+GET http://127.0.0.1:3002/api/books/3
+Authorization: Bearer {{token}}
+
+###
+POST http://127.0.0.1:3002/api/books
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+    "title": "Title",
+    "author": "Author",
+    "year": "1984"
+}
+
+###
+DELETE http://127.0.0.1:3002/api/books/2
+Authorization: Bearer {{token}}
+
+###
+POST http://127.0.0.1:3003/api/orders
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+    "userId": "1",
+    "bookId": "3",
+    "quantity": "1984"
+}
+
+###
+GET http://127.0.0.1:3003/api/orders/1
+Authorization: Bearer {{token}}
+
+###
+DELETE  http://127.0.0.1:3003/api/orders/1
+Authorization: Bearer {{token}}
+
+###
+PATCH http://127.0.0.1:3003/api/orders/3
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+    "userId": "1",
+    "bookId": "4",
+    "quantity": "1984"
+}

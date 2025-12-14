@@ -4,12 +4,19 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "user": "node --watch userService/index.js",
+    "book": "node --watch bookService/index.js",
+    "order": "node --watch orderService/index.js",
+    "all": "npx concurrently 'npm run user' 'npm run book' 'npm run order'"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bcrypt": "^6.0.0",
+    "concurrently": "^9.2.1",
     "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.3",
     "sequelize": "^6.37.7",
     "sequelize-cli": "^6.6.3",
     "sqlite3": "^5.1.7"

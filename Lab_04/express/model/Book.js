@@ -5,23 +5,25 @@ import { sequelize } from "../controller/db.js";
 export const Book = sequelize.define(
 	'Book',
 	{
-		id:{
+		id: {
 			type: DataTypes.INTEGER,
 			allowNull: false,
 			primaryKey: true,
 			autoIncrement: true
 		},
-		title:{
+		title: {
 			type: DataTypes.STRING,
 			allowNull: false,
 		},
-		author:{
+		author: {
 			type: DataTypes.STRING,
 			allowNull: false,
 		},
-		year:{
+		year: {
 			type: DataTypes.INTEGER,
 			allowNull: false,
 		}
 	}
 )
+
+sequelize.sync()
